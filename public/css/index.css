@@ -1,0 +1,91 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://64.media.tumblr.com/4aff44d27557f7264b44be326441833d/tumblr_o2ejscvGov1qa9gmgo4_1280.png');
+    background-size: 100%;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+.input-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+.input-form h1 {
+    cursor: default;
+    transition: .5s;
+}
+.input-form h1:hover {
+    transform: translateY(-10%);
+    transition: .5s;
+}
+.bank-select {
+    display: flex;
+    justify-content: space-between;
+    justify-items:center;
+    width: 100px;
+}
+
+.money-input {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    border: none;
+    border-bottom: 1px cyan solid;
+    width: 50%;
+    background-color: transparent;
+    color: cyan;
+    transition: .7s;
+    font-size: 30px;
+    outline: none;
+    margin-left: 1%;
+}
+.money-input:hover {
+    transition: .7s;
+    border-color: lime;
+    color: lime;
+    transform: translateY(-10%);
+}
+
+
+.money-input::placeholder {
+    color: white;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    justify-items:center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1%;
+}
+.result {
+    width: 1000px;
+    height: 250px;
+    background-color: rgba(0,0,0,0.93);
+    border: solid transparent 1px;
+    border-radius: 32px;
+    transition: 1s;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+.result:hover {
+    border-color: cyan;
+    transition: 1s;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    border-radius: 32px;
+    width: 1000px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.93);
+    border: solid transparent 1px;
+    transition: 1s;
+}
+
+.container-fluid:hover{
+    border-color: white;
+    transition: 1s;
+}
