@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,12 +13,28 @@
         <div class="container">
             <div class="container-fluid">
                 <form method="POST" class="input-form">
-                    <h1>💸</h1><input type="text" class="money-input" placeholder="amount" name="amount">
+                    <ul>
+                        <li class="money-textbox">
+                            <h1>💸<input type="text" class="money-input" placeholder="amount" name="amount" maxlength="8"></h1>
+                        </li>
+                        <li style="display: flex; justify-content: space-evenly; margin-top: 6%;">
+                            <input type="radio" value="kbank" id="kbank" name="bank-slct" checked><img name="img-slct" src="assets/84bd3a286db7ed281a565d28f00972bfd5fa32d3.png">
+                            <input type="radio" value="ktb" id="ktb" name="bank-slct"><img name="img-slct" src="assets/18a67883c8ef3276340ba4e471dc9d991eecf8c1.jpg">
+                            <input type="radio" value="gsb" id="gsb" name="bank-slct"><img name="img-slct" style="height: 82px;" src="assets/5531185c651ca6ec4045a1a54fd96b7229cab236.png">
+                            <input type="radio" value="scb" id="scb" name="bank-slct"><img name="img-slct" src="assets/1baf2a4560a07369016c1176fe1bf5bc8c0f27d2.jpg">
+                            <input type="radio" value="bay" id="bay" name="bank-slct"><img name="img-slct" src="assets/439e1ada3e39675b7208b2b181e68049dee9fbaf.png">
+                            <input type="radio" value="bbl" id="bbl" name="bank-slct"><img name="img-slct" src="assets/965ad42179ca3e40200c2fc9f9a095197b9b355b.jpg">       
+                        </li>
+                        <li style="display:flex;justify-content: center;margin-top:5%;">
+                            <button type="submit" class="calculate-btn" onclick="calc(); event.preventDefault();">Calculate</button>
+                        </li>
+                    </ul>  
                 </form>
             </div>
             <div class="result">
                 
             </div>
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>
