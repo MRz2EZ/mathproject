@@ -7,15 +7,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
-        <title>Interest calculator | Friend_eiei</title>
+        <title>Interest calculator | Friend888.net</title>
     </head>
     <body>
         <div class="container">
             <div class="container-fluid">
-                <form method="POST" class="input-form">
+                <form method="POST" action="/" class="input-form">
                     <ul>
-                        <li class="money-textbox">
-                            <h1>💸<input type="text" class="money-input" placeholder="amount" name="amount" maxlength="8"></h1>
+                        <li class="money-textbox" style="display:flex;">
+                            <h1>💸<input type="text" class="input" id="amount" placeholder="amount" name="amount" maxlength="8"></h1>
+                            <h1>⌛<input type="text" class="input" id="time" placeholder="month" name="time" maxlength="2" max="12"></h1>
                         </li>
                         <li style="display: flex; justify-content: space-evenly; margin-top: 6%;">
                             <input type="radio" value="kbank" id="kbank" name="bank-slct" checked><img name="img-slct" src="assets/84bd3a286db7ed281a565d28f00972bfd5fa32d3.png">
@@ -23,7 +24,7 @@
                             <input type="radio" value="gsb" id="gsb" name="bank-slct"><img name="img-slct" style="height: 82px;" src="assets/5531185c651ca6ec4045a1a54fd96b7229cab236.png">
                             <input type="radio" value="scb" id="scb" name="bank-slct"><img name="img-slct" src="assets/1baf2a4560a07369016c1176fe1bf5bc8c0f27d2.jpg">
                             <input type="radio" value="bay" id="bay" name="bank-slct"><img name="img-slct" src="assets/439e1ada3e39675b7208b2b181e68049dee9fbaf.png">
-                            <input type="radio" value="bbl" id="bbl" name="bank-slct"><img name="img-slct" src="assets/965ad42179ca3e40200c2fc9f9a095197b9b355b.jpg">       
+                            <input type="radio" value="bbl" id="bbl" name="bank-slct"><img name="img-slct" src="assets/965ad42179ca3e40200c2fc9f9a095197b9b355b.jpg">
                         </li>
                         <li style="display:flex;justify-content: center;margin-top:5%;">
                             <button type="submit" class="calculate-btn" onclick="calc(); event.preventDefault();">Calculate</button>
@@ -32,9 +33,25 @@
                 </form>
             </div>
             <div class="result">
-                
+                <div class="result-fluid" style="margin-top: 3%;margin-left: 5%;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li>
+                            <h1>Interest Rate<input type="text" name="result" class="input" id="interest_rate" disabled></h1>
+                        </li>
+                        <li>
+                            <h1>Interest Received<input type="text" name="result" class="input" id="interest_received" disabled></h1>
+                        </li>
+                        <li>
+                            <h1>Money Accumulated<input type="text" name="result" class="input" id="money_received" disabled></h1>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info" id="info">
+                <h1 class="info" id="info">?</h1>
             </div>
         </div>
         <script src="js/main.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     </body>
 </html>
